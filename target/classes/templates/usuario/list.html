@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Listar usuarios</title>
+	<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+	<h3>Listar usuarios</h3>
+    <table class="table table-striped">
+        <tr>
+        	<th>Id</th>
+			<th>Nombre</th>
+			<th>Clave</th>
+			<th>Email</th>
+			<th></th>
+			<th></th>
+		</tr>
+        <tr th:each="usuario : ${lista}">
+        	<td th:text="${usuario.id}">Id</td>
+            <td th:text="${usuario.name}">Nombre</td>
+            <td th:text="${usuario.pass}">Password</td>
+            <td th:text="${usuario.email}">Email</td>
+            <td><a th:href="@{/usuario/eliminar/}+${usuario.id}">Eliminar</a></td>
+            <td><a th:href="@{/usuario/editar/}+${usuario.id}">Editar</a></td>
+        </tr>
+    </table>
+    
+    <p><a th:href="@{/}">Inicio</a></p>
+</body>
+</html>

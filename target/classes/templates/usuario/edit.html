@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Editar usuario</title>
+</head>
+<body>
+	<h3>Editar usuario</h3>
+    <form th:action="@{/usuario/editar/submit}" th:object="${usuario}" method="post" >
+	    <input type="text" id="name" name="name" placeholder="Nombre" th:field="*{name}"/>
+	    <br/><br/>
+	    <input type="password" id="pass" name="pass" placeholder="Contraseña" th:field="*{pass}"/>
+	    <br/><br/>
+	    <input type="email" id="email" name="email" placeholder="Email" th:field="*{email}"/>
+	    <br/><br/>
+	    <button>Guardar</button>
+	    
+	    <input type="hidden" id="id" name="id" th:field="*{id}"/>
+	</form>
+	
+	<p><a th:href="@{/}">Inicio</a></p>
+</body>
+</html>

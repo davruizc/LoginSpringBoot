@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Mi Tienda</title>
+</head>
+<body>
+    <header>
+        <h1>Mi Tienda</h1>
+    </header>
+	<nav>
+		<ul>
+			<li><a th:href="@{/login}">Login</a></li>
+			<li><a th:href="@{/carrito}">Carrito</a></li>
+		</ul>
+	</nav>
+	<h2>Usuarios</h2>
+	<nav>
+        <ul>
+            <li><a th:href="@{/usuario/crear}">Nuevo usuario</a></li>
+            <li><a th:href="@{/usuario/listar}">Listado de usuarios</a></li>
+        </ul>
+    </nav>
+    <h2>Productos</h2>
+    <nav>
+        <ul>
+            <li><a th:href="@{/producto/crear}">Nuevo producto</a></li>
+            <li><a th:href="@{/producto/listar}">Listado de productos</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

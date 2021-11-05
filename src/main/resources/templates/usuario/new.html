@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Crear usuario</title>
+</head>
+<body>
+	<h3>Crear usuario</h3>
+    <form th:action="@{/usuario/crear/submit}" th:object="${usuario}" method="post" >
+	    <input type="text" id="name" name="name" placeholder="Nombre"/>
+	    <br/><br/>
+	    <input type="password" id="pass" name="pass" placeholder="Contraseña"/>
+	    <br/><br/>
+	    <input type="email" id="email" name="email" placeholder="Email"/>
+	    <br/><br/>
+	    <button>Nuevo</button>
+	</form>
+	
+	<p><a th:href="@{/}">Inicio</a></p>
+</body>
+</html>
